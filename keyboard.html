@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mobile UI Keyboard</title>
+    <style>
+      /* Add some basic styling to make the keyboard visible */
+      body {
+        background-color: #f0f0f0;
+        padding: 10px;
+      }
+      .key {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile UI keyboard layout -->
+    <div class="keyboard">
+      <div class="key" onclick="sendKey('w')">W</div>
+      <div class="key" onclick="sendKey('a')">A</div>
+      <div class="key" onclick="sendKey('s')">S</div>
+      <div class="key" onclick="sendKey('d')">D</div>
+      <div class="key" onclick="sendKey(' ')}>Space</div>
+      <!-- Add more keys as needed -->
+    </div>
+    <script>
+      function sendKey(key) {
+        // Send the key press event to the game iframe
+        parent.document.getElementById('game-container').contentWindow.postMessage('keyPress', key);
+      }
+    </script>
+  </body>
+</html>
