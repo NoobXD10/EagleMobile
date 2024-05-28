@@ -1,6 +1,17 @@
-#fullscreen-toggle {
+/* Styles for fullscreen mode */
+.fullscreen-element {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+/* Styles for the toggle button */
+#toggle-fullscreen {
   position: absolute;
   top: 10px;
-  left: 10px;
-  z-index: 1;
+  right: 10px;
+  cursor: pointer;
 }
